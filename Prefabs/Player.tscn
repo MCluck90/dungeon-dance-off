@@ -41,3 +41,12 @@ shape = SubResource( 1 )
 [node name="RayCast2D" type="RayCast2D" parent="."]
 visible = false
 position = Vector2( 8, 8 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+current = true
+limit_left = 0
+limit_top = 0
+limit_smoothed = true
+smoothing_enabled = true
+smoothing_speed = 4.0
