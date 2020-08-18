@@ -69,5 +69,5 @@ exit={
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
-environment/default_clear_color=Color( 0.036, 0.0594667, 0.1, 1 )
+environment/default_clear_color=Color( 0.0352941, 0.0588235, 0.101961, 1 )
 environment/default_environment="res://default_env.tres"
