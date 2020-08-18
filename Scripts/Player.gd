@@ -12,6 +12,7 @@ var inputs = {
 	"ui_left": Vector2.LEFT,
 	"ui_right": Vector2.RIGHT
 }
+var power_level = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,7 +25,12 @@ func _process(delta):
 			move(dir)
 			
 func move(dir):
-	$RayCast2D.cast_to = inputs[dir] * tile_size * 0.99
+	$RayCast2D.cast_to = inputs[dir] * tile_size * power_level
 	$RayCast2D.force_raycast_update()
 	if !$RayCast2D.is_colliding():
-		position += inputs[dir] * tile_size
+		position += inputs[dir] * tile_size * power_level
+		$Camera2D/CanvasLayer/BeatBar.emit_signal("reset")
+
+
+func _on_BeatBar_power(new_power_level):
+	power_level = new_power_level

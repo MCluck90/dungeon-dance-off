@@ -56,3 +56,4 @@ smoothing_speed = 4.0
 
 [node name="BeatBar" parent="Camera2D/CanvasLayer" instance=ExtResource( 3 )]
 position = Vector2( 0, 128 )
+[connection signal="power" from="Camera2D/CanvasLayer/BeatBar" to="." method="_on_BeatBar_power"]
