@@ -30,14 +30,14 @@ func move(dir):
 		$RayCast2D.cast_to = inputs[dir] * tile_size * power
 		$RayCast2D.force_raycast_update()
 		var collider = $RayCast2D.get_collider()
-		if collider == null:
+		if collider != null && collider.has_method("on_player_collision"):
+			collider.on_player_collision()
+		if collider == null || collider.is_in_group("pass-through"):
 			position += inputs[dir] * tile_size * power
 			break
 		elif collider.is_in_group("chest"):
 			collider.open_chest()
-			collider.on_player_collision()
-		else:
-			print(collider)
+			break
 		
 
 
