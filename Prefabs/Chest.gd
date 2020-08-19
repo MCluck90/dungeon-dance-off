@@ -2,19 +2,19 @@ extends KinematicBody2D
 
 signal next_level
 
-export (String, FILE, "*.tscn,*.scn") var NextLevel
+export (String, FILE, "*.tscn,*.scn") var nextLevel
 
-var closed = true
+export (bool) var open
 
 func _ready():
-	pass # Replace with function body.
+	if open:
+		open_chest()
 
 func on_player_collision():
-	if closed:
+	if !open:
 		pass
-	emit_signal("next_level", NextLevel)
+	emit_signal("next_level", nextLevel)
 	
 func open_chest():
-	if closed:
-		$Sprite.region_rect.position.x += 16
-		closed = false
+	$Sprite.region_rect.position.x = 144
+	open = true

@@ -27,7 +27,6 @@ extents = Vector2( 8, 8 )
 "chest",
 ]]
 script = ExtResource( 2 )
-NextLevel = "res://Levels/Template.tscn"
 
 [node name="Sprite" type="Sprite" parent="."]
 material = SubResource( 2 )
