@@ -130,13 +130,13 @@ position = Vector2( 16, 0 )
 z_index = 1
 texture = ExtResource( 1 )
 centered = false
-offset = Vector2( 4, 0 )
+offset = Vector2( 4, 2 )
 region_enabled = true
-region_rect = Rect2( 340, 240, 8, 16 )
+region_rect = Rect2( 340, 242, 8, 12 )
 script = ExtResource( 2 )
 
 [node name="Timer" type="Timer" parent="SelectionBar"]
-wait_time = 0.15
+wait_time = 0.1
 autostart = true
 [connection signal="reset" from="." to="." method="_on_BeatBar_reset"]
 [connection signal="power_signal" from="SelectionBar" to="." method="_on_SelectionBar_power_signal"]
