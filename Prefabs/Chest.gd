@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 signal next_level
 
-export (String) var NextLevel
+export (String, FILE, "*.tscn,*.scn") var NextLevel
 
 var closed = true
 
