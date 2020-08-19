@@ -25,11 +25,20 @@ func _process(delta):
 			move(dir)
 			
 func move(dir):
-	$RayCast2D.cast_to = inputs[dir] * tile_size * power_level
-	$RayCast2D.force_raycast_update()
-	if !$RayCast2D.is_colliding():
-		position += inputs[dir] * tile_size * power_level
-		$Camera2D/CanvasLayer/BeatBar.emit_signal("reset")
+	$Camera2D/CanvasLayer/BeatBar.emit_signal("reset")
+	for power in range(power_level, 0, -1):
+		$RayCast2D.cast_to = inputs[dir] * tile_size * power
+		$RayCast2D.force_raycast_update()
+		var collider = $RayCast2D.get_collider()
+		if collider == null:
+			position += inputs[dir] * tile_size * power
+			break
+		elif collider.is_in_group("chest"):
+			collider.open_chest()
+			collider.on_player_collision()
+		else:
+			print(collider)
+		
 
 
 func _on_BeatBar_power(new_power_level):
