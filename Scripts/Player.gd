@@ -35,9 +35,6 @@ func move(dir):
 		if collider == null || collider.is_in_group("pass-through"):
 			position += inputs[dir] * tile_size * power
 			break
-		elif collider.is_in_group("chest"):
-			collider.open_chest()
-			break
 		
 
 

@@ -11,9 +11,8 @@ func _ready():
 		open_chest()
 
 func on_player_collision():
-	if !open:
-		pass
-	emit_signal("next_level", nextLevel)
+	if open:
+		emit_signal("next_level", nextLevel)
 	
 func open_chest():
 	$Sprite.region_rect.position.x = 144
