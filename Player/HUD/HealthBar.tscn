@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Prefabs/HealthBar.gd" type="Script" id=1]
+[ext_resource path="res://Player/HUD/HealthBar.gd" type="Script" id=1]
 [ext_resource path="res://asset-pack.png" type="Texture" id=2]
 
 [node name="HealthBar" type="Node2D"]

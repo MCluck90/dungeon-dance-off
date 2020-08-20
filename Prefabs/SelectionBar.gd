@@ -1,16 +1,6 @@
 extends Sprite
 
 signal power_signal
-signal reset_signal
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 func _on_Timer_timeout():
 	position.x += 16
@@ -24,7 +14,3 @@ func _on_Timer_timeout():
 	if position.x > 128:
 		power_level = 3
 	emit_signal("power_signal", power_level)
-
-
-func _on_SelectionBar_reset_signal():
-	position.x = 16

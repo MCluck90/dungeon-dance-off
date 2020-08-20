@@ -2,8 +2,8 @@
 
 [ext_resource path="res://asset-pack.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
-[ext_resource path="res://Prefabs/BeatBar.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Prefabs/HealthBar.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player/HUD/BeatBar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/HUD/HealthBar.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;

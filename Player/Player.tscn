@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Grid/player.gd" type="Script" id=1]
+[ext_resource path="res://asset-pack.png" type="Texture" id=2]
+[ext_resource path="res://Player/HUD.tscn" type="PackedScene" id=3]
+
+[node name="Player" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 448, 0, 16, 16 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+offset = Vector2( 8, 8 )
+current = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="HUD" parent="Camera2D/CanvasLayer" instance=ExtResource( 3 )]
+visible = false
+[connection signal="power" from="Camera2D/CanvasLayer/HUD" to="." method="_on_HUD_power"]

@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://asset-pack.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/LevelChanger.gd" type="Script" id=2]
-[ext_resource path="res://Levels/grid.gd" type="Script" id=3]
-[ext_resource path="res://Levels/actor.gd" type="Script" id=4]
+[ext_resource path="res://Grid/grid.gd" type="Script" id=3]
+[ext_resource path="res://Grid/player.gd" type="Script" id=4]
+[ext_resource path="res://Grid/pawn.gd" type="Script" id=5]
+
 
 [sub_resource type="TileSet" id=1]
 0/name = "grass-1"
@@ -315,7 +317,7 @@
 21/shapes = [  ]
 21/z_index = 0
 
-[sub_resource type="Shader" id=4]
+[sub_resource type="Shader" id=2]
 code = "shader_type canvas_item;
 
 void fragment() {
@@ -329,10 +331,10 @@ void fragment() {
 	}
 }"
 
-[sub_resource type="ShaderMaterial" id=5]
-shader = SubResource( 4 )
+[sub_resource type="ShaderMaterial" id=3]
+shader = SubResource( 2 )
 
-[sub_resource type="TileSet" id=3]
+[sub_resource type="TileSet" id=4]
 1/name = "empty"
 1/texture = ExtResource( 1 )
 1/tex_offset = Vector2( 0, 0 )
@@ -358,8 +360,8 @@ format = 1
 tile_data = PoolIntArray( 3, 1610612743, 0, 5, 1610612736, 0, 6, 1610612738, 0, 7, 1610612738, 0, 8, 1610612738, 0, 9, 1610612738, 0, 65539, 1610612743, 0, 65541, 1610612736, 0, 65542, 1610612738, 0, 65543, 1610612738, 0, 65544, 1610612738, 0, 65545, 1610612738, 0, 131075, 1610612743, 0, 131078, 1610612736, 0, 131079, 1610612736, 0, 131080, 1610612736, 0, 131081, 1610612736, 0, 196610, 1610612741, 0, 196611, 1610612743, 0, 196612, 1610612741, 0, 196616, 1610612741, 0, 196617, 1610612741, 0, 262144, -1073741817, 0, 262145, -1073741817, 0, 262146, -1073741817, 0, 262147, -1073741811, 0, 262148, -1073741817, 0, 262149, -1073741817, 0, 262150, -1073741817, 0, 262151, -1073741817, 0, 262152, -1610612726, 0, 262153, 1610612741, 0, 327680, 1610612736, 0, 327681, 1610612736, 0, 327682, 1610612736, 0, 327683, 1610612736, 0, 327684, 1610612736, 0, 327685, 1610612736, 0, 327686, 1610612736, 0, 327687, 1610612742, 0, 327688, 1610612743, 0, 393216, 1610612738, 0, 393217, 1610612738, 0, 393218, 1610612738, 0, 393219, 1610612738, 0, 393220, 1610612736, 0, 393221, 1610612736, 0, 393222, 1610612736, 0, 393223, 1610612736, 0, 393224, 1610612743, 0, 458752, 1610612738, 0, 458753, 1610612738, 0, 458754, 1610612738, 0, 458755, 1610612738, 0, 458756, 1610612738, 0, 458757, 1610612736, 0, 458758, 1610612736, 0, 458759, 1610612736, 0, 458760, 1610612743, 0, 524288, 1610612738, 0, 524289, 1610612738, 0, 524290, 1610612738, 0, 524291, 1610612738, 0, 524292, 1610612738, 0, 524293, 1610612738, 0, 524294, 1610612736, 0, 524295, 1610612736, 0, 524296, 1610612743, 0 )
 
 [node name="Object" type="TileMap" parent="."]
-material = SubResource( 5 )
-tile_set = SubResource( 3 )
+material = SubResource( 3 )
+tile_set = SubResource( 4 )
 cell_size = Vector2( 16, 16 )
 format = 1
 script = ExtResource( 3 )
@@ -386,3 +388,14 @@ __meta__ = {
 }
 
 [node name="Tween" type="Tween" parent="Object/Player"]
+
+[node name="Tree" type="Node2D" parent="Object"]
+position = Vector2( 16, 48 )
+script = ExtResource( 5 )
+type = 1
+
+[node name="Sprite" type="Sprite" parent="Object/Tree"]
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 16, 16, 16 )
