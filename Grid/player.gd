@@ -6,6 +6,7 @@ var power_level = 0
 var can_move = false
 
 func _ready():
+	# Allows us to hide all the HUD cruft when making levels
 	$Camera2D.visible = true
 	$Camera2D/CanvasLayer/HUD.visible = true
 
@@ -14,7 +15,7 @@ func _on_HUD_power(new_power_level):
 	if power_level == 0:
 		can_move = true
 	
-func _process(delta):
+func _process(_delta):
 	var input_direction = get_input_direction()
 	if not input_direction:
 		return
@@ -22,19 +23,27 @@ func _process(delta):
 	can_move = false
 	
 	var target_level = 0
+	var other = null
 	for level in range(1, power_level + 1):
-		match Grid.get_cell_movement_type(self, input_direction * level):
+		var collision = Grid.get_collision(self, input_direction * level)
+		match collision.type:
 			"empty":
 				target_level = level
 			"stop":
 				target_level = level
 				break
+			"collide":
+				target_level = level - 1
+				other = collision.node
+				break
 			"solid":
 				break
 		
 	if target_level > 0:
-		var target_position = Grid.request_move(self, input_direction * target_level)
+		var target_position = Grid.request_move(self, input_direction * target_level, true)
 		move_to(target_position)
+		if other != null:
+			other.on_collision(self)
 
 func get_input_direction():
 	return Vector2(
@@ -60,4 +69,5 @@ func move_to(target_position):
 	yield($Tween, "tween_completed")
 	
 	set_process(true)
+	Grid.update_ais()
 
