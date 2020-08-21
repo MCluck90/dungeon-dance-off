@@ -69,11 +69,44 @@ func move(input_direction):
 	else:
 		Grid.update_ais()
 
-
 func attack(input_direction):
-	var collision = Grid.get_collision(self, input_direction)
+	if power_level == 0:
+		return Grid.update_ais()
+	
+	var collision = Grid.get_collision(self, input_direction * power_level)
+	# Animate weapon
+	var weapon = $Sword
+	if power_level == 2:
+		weapon = $Spear
+	if power_level == 3:
+		weapon = $Bow
+	
+	set_process(false)
+	weapon.visible = true
+	weapon.position = Vector2.ZERO
+	
+	var anim_speed = 0.2
+	var tween = weapon.get_node("Tween")
+	tween.interpolate_property(
+		weapon,
+		"position",
+		weapon.position,
+		input_direction * 16 * power_level,
+		0.2 + (power_level - 1) * 0.1,
+		Tween.TRANS_LINEAR, Tween.EASE_IN
+	)
+	tween.start()
+
+	# Stop the function execution until the animation finished
+	yield(tween, "tween_completed")
+	
+	weapon.visible = false
+	
+	set_process(true)
+	
 	if collision.has('node') && collision.node != null && collision.node.has_method('on_attack'):
 		collision.node.on_attack()
+		
 	Grid.update_ais()
 
 func get_input_direction():
