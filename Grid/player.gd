@@ -2,9 +2,11 @@ extends "pawn.gd"
 
 onready var Grid = get_parent()
 onready var Globals = get_node("/root/Globals")
+onready var Mode = get_node("Camera2D/CanvasLayer/HUD/BeatBar/Mode")
 
 var power_level = 0
-var can_move = false
+var prev_power_level = 0
+var can_act = false
 
 func _ready():
 	# Allows us to hide all the HUD cruft when making levels
@@ -14,15 +16,34 @@ func _ready():
 func _on_HUD_power(new_power_level):
 	power_level = new_power_level
 	if power_level == 0:
-		can_move = true
-	
+		can_act = true
+
 func _process(_delta):
+	if power_level == 0 && prev_power_level != 0:
+		can_act = true
+
+	prev_power_level = power_level
+
+	if Input.is_action_just_pressed("prev_mode"):
+		Mode.prev_mode()
+	if Input.is_action_just_pressed("next_mode"):
+		Mode.next_mode()
+
+	if not can_act:
+		return
+
 	var input_direction = get_input_direction()
 	if not input_direction:
 		return
-		
-	can_move = false
-	
+
+	can_act = false
+	match Mode.mode:
+		"move":
+			move(input_direction)
+		"attack":
+			attack(input_direction)
+
+func move(input_direction):
 	var target_level = 0
 	var other = null
 	for level in range(1, power_level + 1):
@@ -48,7 +69,11 @@ func _process(_delta):
 	else:
 		Grid.update_ais()
 
-	Globals.add_to_score(target_level + 1)
+	Globals.add_to_score(power_level + 1)
+
+func attack(_input_direction):
+	print("Attack!")
+	Globals.add_to_score(power_level + 1)
 
 func get_input_direction():
 	return Vector2(

@@ -1,7 +1,6 @@
 extends Node2D
 
 signal power
-signal reset
 
 func _ready():
 	pass

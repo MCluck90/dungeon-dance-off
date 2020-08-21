@@ -19,4 +19,3 @@ position = Vector2( 0, 128 )
 ] instance=ExtResource( 4 )]
 position = Vector2( 16, 0 )
 [connection signal="power" from="BeatBar" to="." method="_on_BeatBar_power"]
-[connection signal="reset" from="BeatBar" to="." method="_on_BeatBar_reset"]

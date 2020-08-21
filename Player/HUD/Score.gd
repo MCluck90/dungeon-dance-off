@@ -18,8 +18,6 @@ func set_score():
 		digits.push_front(num % 10)
 		num = num / 10
 
-	print(digits)
-
 	for i in range(0, len(digits)):
 		$TileMap.set_cell(i + 1, 0, digits[i])
 	$TileMap.set_cell(0, 0, num)
