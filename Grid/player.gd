@@ -14,14 +14,12 @@ func _ready():
 	$Camera2D/CanvasLayer/HUD.visible = true
 
 func _on_HUD_power(new_power_level):
+	prev_power_level = power_level
 	power_level = new_power_level
-	if power_level == 0:
-		can_act = true
-
-func _process(_delta):
 	if power_level == 0 && prev_power_level != 0:
 		can_act = true
 
+func _process(_delta):
 	prev_power_level = power_level
 
 	if Input.is_action_just_pressed("prev_mode"):
