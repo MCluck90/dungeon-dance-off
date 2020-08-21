@@ -93,7 +93,7 @@ func attack(input_direction):
 		weapon.position,
 		input_direction * 16 * power_level,
 		0.2 + (power_level - 1) * 0.1,
-		Tween.TRANS_LINEAR, Tween.EASE_IN
+		Tween.TRANS_CUBIC, Tween.EASE_IN_OUT
 	)
 	tween.start()
 
