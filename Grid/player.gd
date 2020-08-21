@@ -1,6 +1,7 @@
 extends "pawn.gd"
 
 onready var Grid = get_parent()
+onready var Globals = get_node("/root/Globals")
 
 var power_level = 0
 var can_move = false
@@ -44,6 +45,10 @@ func _process(_delta):
 		move_to(target_position)
 		if other != null:
 			other.on_collision(self)
+	else:
+		Grid.update_ais()
+
+	Globals.add_to_score(target_level + 1)
 
 func get_input_direction():
 	return Vector2(

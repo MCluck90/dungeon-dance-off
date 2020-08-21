@@ -12,7 +12,7 @@ func change_health(delta):
 func set_hearts():
 	for child in get_children():
 		if child.is_in_group("sub-heart"):
-			remove_child(child)
+			child.queue_free()
 	
 	for i in range(0, health, 1):
 		var heart = $BaseHeart.duplicate()

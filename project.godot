@@ -19,6 +19,10 @@ config/name="Dungeon Dance Off"
 run/main_scene="res://Levels/Level-03.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://Globals.tscn"
+
 [display]
 
 window/size/width=160
