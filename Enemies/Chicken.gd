@@ -47,3 +47,6 @@ func change_direction():
 
 func on_collision(_other):
 	pass
+	
+func on_attack():
+	Grid.remove_pawn(self)

@@ -76,6 +76,11 @@ func update_pawn_position(pawn, cell_start, cell_target):
 	set_cellv(cell_target, pawn.type)
 	set_cellv(cell_start, EMPTY)
 	return map_to_world(cell_target)
+	
+func remove_pawn(pawn):
+	var cell_position = world_to_map(pawn.position)
+	set_cellv(cell_position, EMPTY)
+	pawn.queue_free()
 
 func get_nodes_by_type(type):
 	var nodes = []

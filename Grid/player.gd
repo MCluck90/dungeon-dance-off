@@ -34,6 +34,8 @@ func _process(_delta):
 	if not input_direction:
 		return
 
+	Globals.add_to_score(1)
+
 	can_act = false
 	match Mode.mode:
 		"move":
@@ -67,11 +69,12 @@ func move(input_direction):
 	else:
 		Grid.update_ais()
 
-	Globals.add_to_score(1)
 
-func attack(_input_direction):
-	print("Attack!")
-	Globals.add_to_score(1)
+func attack(input_direction):
+	var collision = Grid.get_collision(self, input_direction)
+	if collision.has('node') && collision.node != null && collision.node.has_method('on_attack'):
+		collision.node.on_attack()
+	Grid.update_ais()
 
 func get_input_direction():
 	return Vector2(
