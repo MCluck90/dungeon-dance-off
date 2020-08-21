@@ -23,10 +23,14 @@ func _process(delta):
 	
 	var target_level = 0
 	for level in range(1, power_level + 1):
-		if Grid.is_move_possible(self, input_direction * level):
-			target_level = level
-		else:
-			break
+		match Grid.get_cell_movement_type(self, input_direction * level):
+			"empty":
+				target_level = level
+			"stop":
+				target_level = level
+				break
+			"solid":
+				break
 		
 	if target_level > 0:
 		var target_position = Grid.request_move(self, input_direction * target_level)

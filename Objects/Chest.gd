@@ -1,19 +1,14 @@
-extends KinematicBody2D
+extends "res://Grid/pawn.gd"
 
 signal next_level
 
 export (String, FILE, "*.tscn,*.scn") var nextLevel
-
 export (bool) var open
 
 func _ready():
 	if open:
-		open_chest()
-
-func on_player_collision():
-	if open:
-		emit_signal("next_level", nextLevel)
+		unlock()
 	
-func open_chest():
+func unlock():
 	$Sprite.region_rect.position.x = 144
 	open = true
