@@ -46,6 +46,16 @@ func _process(_delta):
 func move(input_direction):
 	var target_level = 0
 	var other = null
+	if power_level == 0:
+		$MissedBeat.play()
+	if power_level == 1:
+		$Beat1.play()
+	if power_level == 2:
+		$Beat2.play()
+	if power_level == 3:
+		$Beat1.play()
+		$Beat2.play()
+		
 	for level in range(1, power_level + 1):
 		var collision = Grid.get_collision(self, input_direction * level)
 		match collision.type:
@@ -84,6 +94,7 @@ func attack(input_direction):
 	set_process(false)
 	weapon.visible = true
 	weapon.position = Vector2.ZERO
+	weapon.get_node("SFX").play()
 	
 	var anim_speed = 0.2
 	var tween = weapon.get_node("Tween")

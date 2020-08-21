@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Grid/player.gd" type="Script" id=1]
 [ext_resource path="res://asset-pack.png" type="Texture" id=2]
 [ext_resource path="res://Player/HUD.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SFX/swing2.wav" type="AudioStream" id=4]
+[ext_resource path="res://SFX/swing3.wav" type="AudioStream" id=5]
+[ext_resource path="res://SFX/sword-unsheathe.wav" type="AudioStream" id=6]
+[ext_resource path="res://SFX/beat2.wav" type="AudioStream" id=7]
+[ext_resource path="res://SFX/beat1.wav" type="AudioStream" id=8]
+[ext_resource path="res://SFX/missed-beat.wav" type="AudioStream" id=9]
 
 [node name="Player" type="Node2D"]
 script = ExtResource( 1 )
@@ -37,6 +43,9 @@ region_rect = Rect2( 512, 128, 16, 16 )
 
 [node name="Tween" type="Tween" parent="Sword"]
 
+[node name="SFX" type="AudioStreamPlayer" parent="Sword"]
+stream = ExtResource( 6 )
+
 [node name="Spear" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 2 )
@@ -46,6 +55,9 @@ region_rect = Rect2( 512, 48, 16, 16 )
 
 [node name="Tween" type="Tween" parent="Spear"]
 
+[node name="SFX" type="AudioStreamPlayer" parent="Spear"]
+stream = ExtResource( 4 )
+
 [node name="Bow" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 2 )
@@ -54,4 +66,16 @@ region_enabled = true
 region_rect = Rect2( 624, 80, 16, 16 )
 
 [node name="Tween" type="Tween" parent="Bow"]
+
+[node name="SFX" type="AudioStreamPlayer" parent="Bow"]
+stream = ExtResource( 5 )
+
+[node name="MissedBeat" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="Beat1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="Beat2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
 [connection signal="power" from="Camera2D/CanvasLayer/HUD" to="." method="_on_HUD_power"]
