@@ -69,11 +69,11 @@ func move(input_direction):
 	else:
 		Grid.update_ais()
 
-	Globals.add_to_score(power_level + 1)
+	Globals.add_to_score(1)
 
 func attack(_input_direction):
 	print("Attack!")
-	Globals.add_to_score(power_level + 1)
+	Globals.add_to_score(1)
 
 func get_input_direction():
 	return Vector2(
