@@ -25,3 +25,7 @@ func _get_score_node():
 func add_to_score(delta):
 	score += delta
 	_get_score_node().set_score()
+	
+func set_score(new_score):
+	score = new_score
+	_get_score_node().set_score()

@@ -6,7 +6,7 @@ onready var Mode = get_node("Camera2D/CanvasLayer/HUD/BeatBar/Mode")
 
 var power_level = 0
 var prev_power_level = 0
-var can_act = false
+var can_act = true
 
 func _ready():
 	# Allows us to hide all the HUD cruft when making levels
