@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Enemies/Chicken/Chicken.gd" type="Script" id=1]
+[ext_resource path="res://asset-pack.png" type="Texture" id=2]
+
+[node name="GreenChicken" type="Node2D" groups=[
+"ai",
+]]
+modulate = Color( 0.113725, 1, 0.313726, 1 )
+script = ExtResource( 1 )
+type = 3
+steps_per_direction = 1
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 0.694118, 0.113725, 1 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 416, 112, 16, 16 )
