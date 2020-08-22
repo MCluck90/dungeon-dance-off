@@ -1,5 +1,6 @@
 extends Node2D
 
+onready var Globals = get_node("/root/Globals")
 var health = 3
 
 func _ready():
@@ -8,6 +9,10 @@ func _ready():
 	
 func change_health(delta):
 	health += delta
+	health = max(health, 0)
+	if health == 0:
+		return Globals.on_death()
+	set_hearts()
 	
 func set_hearts():
 	for child in get_children():

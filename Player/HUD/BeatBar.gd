@@ -20,5 +20,3 @@ func show_hit():
 	var timer = get_tree().create_timer($SelectionBar/Timer.wait_time * 3)
 	yield(timer, "timeout")
 	remove_child(hit)
-	
-	

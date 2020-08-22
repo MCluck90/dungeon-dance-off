@@ -77,7 +77,7 @@ func move(input_direction):
 	if target_level > 0:
 		var target_position = Grid.request_move(self, input_direction * target_level, true)
 		move_to(target_position, is_end_of_level)
-		if other != null:
+		if other != null && other.has_method('on_collision'):
 			other.on_collision(self)
 	else:
 		Grid.update_ais()
@@ -153,3 +153,44 @@ func move_to(target_position, is_end_of_level):
 			return get_tree().change_scene(node.nextLevel)
 	Grid.update_ais()
 
+func on_hit(other, damage):
+	set_process(false)
+	
+	var real_position = position
+	var intermediate_position = Vector2(position.x, position.y)
+	if other.position.x > position.x:
+		intermediate_position.x -= 4
+	elif other.position.x < position.x:
+		intermediate_position.x += 4
+	if other.position.y > position.y:
+		intermediate_position.y -= 4
+	elif other.position.y < position.y:
+		intermediate_position.y += 4
+		
+	$Hurt.play()
+		
+	$Tween.interpolate_property(
+		self,
+		"position",
+		position,
+		intermediate_position,
+		0.1,
+		Tween.TRANS_LINEAR, Tween.EASE_IN
+	)
+	$Tween.start()
+	yield($Tween, "tween_completed")
+	
+	$Tween.interpolate_property(
+		self,
+		"position",
+		intermediate_position,
+		real_position,
+		0.1,
+		Tween.TRANS_LINEAR, Tween.EASE_OUT
+	)
+	$Tween.start()
+	yield($Tween, "tween_completed")
+	
+	Globals.change_health(-damage)
+	
+	set_process(true)
