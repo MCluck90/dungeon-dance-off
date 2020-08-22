@@ -26,6 +26,8 @@ func _ready():
 	steps_remaining = steps_per_direction
 
 func update():
+	if steps_per_direction < 1:
+		return
 	var target_position = null
 	for _i in range(0, 4):
 		var direction = to_direction[state]
@@ -43,7 +45,7 @@ func update():
 
 func change_direction():
 	state = next_state[state]
-	steps_remaining = 2
+	steps_remaining = steps_per_direction
 
 func on_collision(_other):
 	pass
