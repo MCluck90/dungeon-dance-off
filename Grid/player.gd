@@ -54,8 +54,7 @@ func move(input_direction):
 	if power_level == 2:
 		$Beat2.play()
 	if power_level == 3:
-		$Beat1.play()
-		$Beat2.play()
+		$Beat3.play()
 		
 	var is_end_of_level = false
 	for level in range(1, power_level + 1):
