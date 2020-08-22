@@ -36,7 +36,7 @@ func get_collision(pawn, direction):
 		END_OF_LEVEL:
 			var node = get_cell_pawn(cell_target)
 			if node.open:
-				return { "type": "stop" }
+				return { "type": "stop", "is_end_of_level": true }
 			else:
 				return { "type": "solid" }
 				
@@ -58,7 +58,7 @@ func request_move(pawn, direction, is_player):
 		return null
 		
 	match cell_target_type:
-		EMPTY:
+		EMPTY, END_OF_LEVEL:
 			return update_pawn_position(pawn, cell_start, cell_target)
 			
 		KEY:
