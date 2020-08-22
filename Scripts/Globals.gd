@@ -2,9 +2,11 @@ extends Node
 
 var score = 0
 var _score_node = null
+var _beatbar_node = null
 
 func _ready():
 	_score_node = null
+	_beatbar_node = null
 
 func _find_score_node(node):
 	if node.has_method("is_in_group") && node.is_in_group("score"):
@@ -29,3 +31,22 @@ func add_to_score(delta):
 func set_score(new_score):
 	score = new_score
 	_get_score_node().set_score()
+
+func _find_beatbar_node(node):
+	if node.name == 'BeatBar':
+		return node
+		
+	for child in node.get_children():
+		var result = _find_beatbar_node(child)
+		if result != null:
+			return result
+			
+func _get_beatbar_node():
+	if _beatbar_node != null:
+		return _beatbar_node
+
+	_beatbar_node = _find_beatbar_node(get_node("/root"))
+	return _beatbar_node
+			
+func on_direction_input():
+	_get_beatbar_node().show_hit()

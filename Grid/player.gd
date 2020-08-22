@@ -34,6 +34,7 @@ func _process(_delta):
 	if not input_direction:
 		return
 
+	Globals.on_direction_input()
 	Globals.add_to_score(1)
 
 	can_act = false
