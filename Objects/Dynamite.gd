@@ -28,32 +28,38 @@ func update():
 				exploded = true
 
 	if exploded:
-		MusicManager.get_node("Explosion").play()
-		dying = true
-		$Tween.interpolate_property(
-			$Sprite,
-			"modulate",
-			Color(1, 1, 1, 1),
-			Color(1, 1, 1, 0.0),
-			0.15,
-			Tween.TRANS_CUBIC, Tween.EASE_OUT
-		)
-		$Tween.interpolate_property(
-			$Sprite,
-			"scale",
-			$Sprite.scale,
-			Vector2(1.2, 1.2),
-			0.15,
-			Tween.TRANS_LINEAR, Tween.EASE_OUT
-		)
-		$Tween.interpolate_property(
-			$Sprite,
-			"offset",
-			$Sprite.offset,
-			Vector2(-6, -2),
-			0.15,
-			Tween.TRANS_LINEAR, Tween.EASE_OUT
-		)
-		$Tween.start()
-		yield($Tween, "tween_completed")
-		Grid.remove_pawn(self)
+		_explode()
+
+func on_attack():
+	update()
+
+func _explode():
+	MusicManager.get_node("Explosion").play()
+	dying = true
+	$Tween.interpolate_property(
+		$Sprite,
+		"modulate",
+		Color(1, 1, 1, 1),
+		Color(1, 1, 1, 0.0),
+		0.15,
+		Tween.TRANS_CUBIC, Tween.EASE_OUT
+	)
+	$Tween.interpolate_property(
+		$Sprite,
+		"scale",
+		$Sprite.scale,
+		Vector2(1.2, 1.2),
+		0.15,
+		Tween.TRANS_LINEAR, Tween.EASE_OUT
+	)
+	$Tween.interpolate_property(
+		$Sprite,
+		"offset",
+		$Sprite.offset,
+		Vector2(-6, -2),
+		0.15,
+		Tween.TRANS_LINEAR, Tween.EASE_OUT
+	)
+	$Tween.start()
+	yield($Tween, "tween_completed")
+	Grid.remove_pawn(self)

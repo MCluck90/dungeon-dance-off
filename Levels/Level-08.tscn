@@ -1869,7 +1869,7 @@ position = Vector2( 64, 64 )
 nextLevel = "res://YouWin.tscn"
 
 [node name="Dynamite" parent="Object" instance=ExtResource( 8 )]
-position = Vector2( 80, 48 )
+position = Vector2( 112, 64 )
 
 [node name="Scorpion" parent="Object" instance=ExtResource( 2 )]
-position = Vector2( 160, 64 )
+position = Vector2( 128, 64 )
