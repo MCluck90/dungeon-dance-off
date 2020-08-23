@@ -56,7 +56,7 @@ func move(input_direction):
 	if power_level == 3:
 		$Beat3.play()
 		
-	var is_end_of_level = false
+	var next_level = null
 	for level in range(1, power_level + 1):
 		var collision = Grid.get_collision(self, input_direction * level)
 		match collision.type:
@@ -64,7 +64,8 @@ func move(input_direction):
 				target_level = level
 			"stop":
 				target_level = level
-				is_end_of_level = collision.has("is_end_of_level") && collision.is_end_of_level
+				if collision.has("next_level"):
+					next_level = collision.next_level
 				break
 			"collide":
 				target_level = level - 1
@@ -75,7 +76,7 @@ func move(input_direction):
 		
 	if target_level > 0:
 		var target_position = Grid.request_move(self, input_direction * target_level, true)
-		move_to(target_position, is_end_of_level)
+		move_to(target_position, next_level)
 		if other != null && other.has_method('on_collision'):
 			other.on_collision(self)
 	else:
@@ -128,7 +129,7 @@ func get_input_direction():
 		int(Input.is_action_just_pressed("ui_down")) - int(Input.is_action_just_pressed("ui_up"))
 	)
 
-func move_to(target_position, is_end_of_level):
+func move_to(target_position, next_level):
 	set_process(false)
 
 	$Tween.interpolate_property(
@@ -146,10 +147,8 @@ func move_to(target_position, is_end_of_level):
 	yield($Tween, "tween_completed")
 	
 	set_process(true)
-	if is_end_of_level:
-		var node = Grid.get_cell_pawn(Grid.world_to_map(target_position))
-		if node.open:
-			return get_tree().change_scene(node.nextLevel)
+	if next_level != null:
+		return get_tree().change_scene(next_level)
 	Grid.update_ais()
 
 func on_hit(other, damage):

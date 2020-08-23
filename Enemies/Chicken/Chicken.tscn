@@ -3,11 +3,11 @@
 [ext_resource path="res://Enemies/Chicken/Chicken.gd" type="Script" id=1]
 [ext_resource path="res://Assets/asset-pack.png" type="Texture" id=2]
 
-
 [node name="Chicken" type="Node2D" groups=[
 "ai",
 ]]
 script = ExtResource( 1 )
+type = 3
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 1, 0.694118, 0.113725, 1 )

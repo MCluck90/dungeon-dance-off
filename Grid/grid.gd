@@ -36,7 +36,7 @@ func get_collision(pawn, direction):
 		END_OF_LEVEL:
 			var node = get_cell_pawn(cell_target)
 			if node.open:
-				return { "type": "stop", "is_end_of_level": true }
+				return { "type": "stop", "next_level": node.nextLevel }
 			else:
 				return { "type": "solid" }
 				

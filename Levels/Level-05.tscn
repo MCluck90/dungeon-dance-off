@@ -1571,7 +1571,6 @@ steps_per_direction = 0
 [node name="Chicken" parent="Object" instance=ExtResource( 8 )]
 modulate = Color( 1, 0.694118, 0.113725, 1 )
 position = Vector2( 96, 64 )
-type = 3
 steps_per_direction = 0
 
 [node name="RedChicken" parent="Object" instance=ExtResource( 9 )]
