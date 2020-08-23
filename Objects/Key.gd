@@ -4,4 +4,5 @@ export (NodePath) var unlockable
 
 func unlock():
 	var node = get_node(unlockable)
-	node.unlock()
+	if node != null && node.has_method('unlock'):
+		node.unlock()
