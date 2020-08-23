@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/swing3.wav-c86af889d48ef912bac061c7ed30dcf0.sample"
+path="res://.import/swing2.wav-e6ce04a27ed24108fc3310501c74216f.sample"
 
 [deps]
 
-source_file="res://SFX/swing3.wav"
-dest_files=[ "res://.import/swing3.wav-c86af889d48ef912bac061c7ed30dcf0.sample" ]
+source_file="res://Assets/SFX/swing2.wav"
+dest_files=[ "res://.import/swing2.wav-e6ce04a27ed24108fc3310501c74216f.sample" ]
 
 [params]
 

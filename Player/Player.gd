@@ -1,4 +1,4 @@
-extends "pawn.gd"
+extends "res://Grid/pawn.gd"
 
 onready var Grid = get_parent()
 onready var Globals = get_node("/root/Globals")

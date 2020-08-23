@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sword-unsheathe.wav-04a86021f30ce3a230270d0257527d81.sample"
+path="res://.import/beat2.wav-42acf4f147f3ac7f1431b031c232863e.sample"
 
 [deps]
 
-source_file="res://SFX/sword-unsheathe.wav"
-dest_files=[ "res://.import/sword-unsheathe.wav-04a86021f30ce3a230270d0257527d81.sample" ]
+source_file="res://Assets/SFX/beat2.wav"
+dest_files=[ "res://.import/beat2.wav-42acf4f147f3ac7f1431b031c232863e.sample" ]
 
 [params]
 

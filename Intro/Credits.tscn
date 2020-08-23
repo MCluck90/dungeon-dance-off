@@ -1,7 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/Credits.gd" type="Script" id=1]
-[ext_resource path="res://asset-pack.png" type="Texture" id=2]
+[ext_resource path="res://Intro/Credits.gd" type="Script" id=1]
+[ext_resource path="res://Assets/asset-pack.png" type="Texture" id=2]
+
+
 
 [sub_resource type="TileSet" id=1]
 0/name = "0"

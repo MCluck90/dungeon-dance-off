@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/get-item.wav-188201651fc57a38f392ef680ab94eb8.sample"
+path="res://.import/hurt-self.wav-847df69a84c40d0505cbd0ad3c2be809.sample"
 
 [deps]
 
-source_file="res://SFX/get-item.wav"
-dest_files=[ "res://.import/get-item.wav-188201651fc57a38f392ef680ab94eb8.sample" ]
+source_file="res://Assets/SFX/hurt-self.wav"
+dest_files=[ "res://.import/hurt-self.wav-847df69a84c40d0505cbd0ad3c2be809.sample" ]
 
 [params]
 

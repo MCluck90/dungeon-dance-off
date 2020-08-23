@@ -17,12 +17,12 @@ _global_script_class_icons={
 
 config/name="Dungeon Beat Down"
 run/main_scene="res://Levels/Level-06.tscn"
-config/icon="res://icon.png"
+config/icon="res://Assets/icon.png"
 
 [autoload]
 
-Globals="*res://Globals.tscn"
-MusicManager="*res://MusicManager.tscn"
+Globals="*res://Autoload/Globals.tscn"
+MusicManager="*res://Autoload/MusicManager.tscn"
 
 [display]
 

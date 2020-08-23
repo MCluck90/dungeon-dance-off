@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/hurt-self.wav-e571780b345205c5d2943b11ed4912de.sample"
+path="res://.import/missed-beat.wav-548dd310ce838fa25b1e3446098ef52e.sample"
 
 [deps]
 
-source_file="res://SFX/hurt-self.wav"
-dest_files=[ "res://.import/hurt-self.wav-e571780b345205c5d2943b11ed4912de.sample" ]
+source_file="res://Assets/SFX/missed-beat.wav"
+dest_files=[ "res://.import/missed-beat.wav-548dd310ce838fa25b1e3446098ef52e.sample" ]
 
 [params]
 
