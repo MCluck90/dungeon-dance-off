@@ -39,6 +39,9 @@ func _attempt_attack():
 	var player = Globals.get_player()
 	var diff = position - player.position
 	var abs_diff = diff.abs() / 16.0
+	# Don't move unless the player is close enough
+	if abs_diff.x > 5 || abs_diff.y > 5:
+		return null
 	if abs_diff.length() == 1:
 		player.on_hit(self, 1)
 		return null

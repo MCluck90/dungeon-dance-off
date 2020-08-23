@@ -1566,7 +1566,7 @@ position = Vector2( 64, 64 )
 position = Vector2( 96, 64 )
 
 [node name="Scorpion2" parent="Object" instance=ExtResource( 2 )]
-position = Vector2( 144, 48 )
+position = Vector2( 128, 48 )
 
 [node name="Scorpion3" parent="Object" instance=ExtResource( 2 )]
 position = Vector2( 160, 80 )

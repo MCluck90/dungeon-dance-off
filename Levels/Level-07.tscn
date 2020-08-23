@@ -1872,10 +1872,10 @@ position = Vector2( 272, 32 )
 unlockable = NodePath("../Chest")
 
 [node name="Scorpion" parent="Object" instance=ExtResource( 2 )]
-position = Vector2( 208, 64 )
+position = Vector2( 192, 64 )
 
 [node name="Scorpion2" parent="Object" instance=ExtResource( 2 )]
-position = Vector2( 256, -96 )
+position = Vector2( 256, -112 )
 
 [node name="Scorpion3" parent="Object" instance=ExtResource( 2 )]
 position = Vector2( 256, -176 )
