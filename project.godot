@@ -26,8 +26,8 @@ MusicManager="*res://Autoload/MusicManager.tscn"
 
 [display]
 
-window/size/width=160
-window/size/height=144
+window/size/width=176
+window/size/height=160
 window/size/test_width=800
 window/size/test_height=720
 window/stretch/mode="2d"

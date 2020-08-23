@@ -9,10 +9,10 @@
 script = ExtResource( 3 )
 
 [node name="HealthBar" parent="." instance=ExtResource( 2 )]
-position = Vector2( 144, 0 )
+position = Vector2( 160, 0 )
 
 [node name="BeatBar" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, 128 )
+position = Vector2( 0, 144 )
 
 [node name="Score" parent="." groups=[
 "score",

@@ -5,7 +5,6 @@
 [ext_resource path="res://Player/HUD/BeatBar.gd" type="Script" id=3]
 [ext_resource path="res://Player/HUD/Mode.gd" type="Script" id=4]
 
-
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
 
@@ -35,12 +34,21 @@ region_enabled = true
 region_rect = Rect2( 688, 160, 16, 16 )
 script = ExtResource( 4 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 16.0
+margin_right = 32.0
+margin_bottom = 16.0
+color = Color( 0.0352941, 0.0627451, 0.101961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="None" type="Node2D" parent="."]
 use_parent_material = true
 
 [node name="LeftEdge" type="Sprite" parent="None"]
 use_parent_material = true
-position = Vector2( 16, 0 )
+position = Vector2( 32, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -48,7 +56,7 @@ region_rect = Rect2( 304, 240, 16, 16 )
 
 [node name="Section1" type="Sprite" parent="None"]
 use_parent_material = true
-position = Vector2( 32, 0 )
+position = Vector2( 48, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -56,7 +64,7 @@ region_rect = Rect2( 320, 240, 16, 16 )
 
 [node name="Section2" type="Sprite" parent="None"]
 use_parent_material = true
-position = Vector2( 48, 0 )
+position = Vector2( 64, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -68,7 +76,7 @@ use_parent_material = true
 [node name="Section1" type="Sprite" parent="Lower"]
 modulate = Color( 0.113725, 1, 0.313726, 1 )
 use_parent_material = true
-position = Vector2( 64, 0 )
+position = Vector2( 80, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -77,7 +85,7 @@ region_rect = Rect2( 320, 240, 16, 16 )
 [node name="Section2" type="Sprite" parent="Lower"]
 modulate = Color( 0.113725, 1, 0.313726, 1 )
 use_parent_material = true
-position = Vector2( 80, 0 )
+position = Vector2( 96, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -86,7 +94,7 @@ region_rect = Rect2( 320, 240, 16, 16 )
 [node name="Section3" type="Sprite" parent="Lower"]
 modulate = Color( 0.113725, 1, 0.313726, 1 )
 use_parent_material = true
-position = Vector2( 96, 0 )
+position = Vector2( 112, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -98,7 +106,7 @@ use_parent_material = true
 [node name="Section1" type="Sprite" parent="Middle"]
 modulate = Color( 1, 0.694118, 0.113725, 1 )
 use_parent_material = true
-position = Vector2( 112, 0 )
+position = Vector2( 128, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -107,7 +115,7 @@ region_rect = Rect2( 320, 240, 16, 16 )
 [node name="Section2" type="Sprite" parent="Middle"]
 modulate = Color( 1, 0.694118, 0.113725, 1 )
 use_parent_material = true
-position = Vector2( 128, 0 )
+position = Vector2( 144, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -119,7 +127,7 @@ use_parent_material = true
 [node name="RightEdge" type="Sprite" parent="Upper"]
 modulate = Color( 0.952941, 0.180392, 0.180392, 1 )
 use_parent_material = true
-position = Vector2( 160, 0 )
+position = Vector2( 176, 0 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
 texture = ExtResource( 1 )
@@ -129,7 +137,7 @@ region_rect = Rect2( 304, 240, 16, 16 )
 
 [node name="SelectionBar" type="Sprite" parent="."]
 use_parent_material = true
-position = Vector2( 16, 0 )
+position = Vector2( 32, 0 )
 z_index = 1
 texture = ExtResource( 1 )
 centered = false
