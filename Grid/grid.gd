@@ -40,7 +40,7 @@ func get_collision(pawn, direction):
 			else:
 				return { "type": "solid" }
 				
-		AI:
+		ACTOR, AI:
 			var node = get_cell_pawn(cell_target)
 			return { "type": "collide", "node": node }
 	
