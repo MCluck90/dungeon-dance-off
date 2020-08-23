@@ -3,7 +3,12 @@ extends "res://Grid/pawn.gd"
 onready var Globals = get_node("/root/Globals")
 onready var Grid = get_parent()
 
+var dying = false
+
 func update():
+	if dying:
+		return
+
 	var diff = _attempt_attack()
 	if diff == null:
 		return
@@ -47,4 +52,15 @@ func _try_move(direction):
 	return true
 
 func on_attack():
+	dying = true
+	$Tween.interpolate_property(
+		$Sprite,
+		"modulate",
+		Color(1, 1, 1, 1),
+		Color(1, 0, 0, 1),
+		0.2,
+		Tween.TRANS_CUBIC, Tween.EASE_OUT
+	)
+	$Tween.start()
+	yield($Tween, "tween_completed")
 	Grid.remove_pawn(self)

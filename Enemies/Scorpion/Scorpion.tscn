@@ -3,7 +3,6 @@
 [ext_resource path="res://Enemies/Scorpion/Scorpion.gd" type="Script" id=1]
 [ext_resource path="res://Assets/asset-pack.png" type="Texture" id=2]
 
-
 [node name="Scorpion" type="Node2D"]
 script = ExtResource( 1 )
 type = 3
@@ -13,3 +12,5 @@ texture = ExtResource( 2 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 384, 80, 16, 16 )
+
+[node name="Tween" type="Tween" parent="."]
