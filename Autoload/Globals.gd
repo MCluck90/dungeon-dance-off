@@ -95,3 +95,7 @@ func get_player():
 
 func on_death():
 	get_node("/root/Level").on_death()
+	
+func change_scene(scene_path):
+	_ready()
+	return get_tree().change_scene(scene_path)

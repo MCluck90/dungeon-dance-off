@@ -14,7 +14,7 @@ func _process(_delta):
 		return get_tree().reload_current_scene()
 
 func _on_next_level(scene_path):
-	return get_tree().change_scene(scene_path)
+	return Globals.change_scene(scene_path)
 
 func on_death():
 	Globals.set_score(start_score)

@@ -8,6 +8,8 @@ enum {
 	AI
 }
 
+onready var Globals = get_node("/root/Globals")
+
 func _ready():
 	for child in get_children():
 		set_cellv(world_to_map(child.position), child.type)
@@ -70,7 +72,7 @@ func request_move(pawn, direction, is_player):
 		END_OF_LEVEL:
 			var node = get_cell_pawn(cell_target)
 			if node.open:
-				return get_tree().change_scene(node.nextLevel)
+				return Globals.change_scene(node.nextLevel)
 
 func update_pawn_position(pawn, cell_start, cell_target):
 	set_cellv(cell_target, pawn.type)

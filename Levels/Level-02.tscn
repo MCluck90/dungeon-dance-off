@@ -1353,4 +1353,4 @@ position = Vector2( 16, 48 )
 
 [node name="Key" parent="Object" instance=ExtResource( 2 )]
 position = Vector2( 96, 48 )
-unlockable = NodePath("../../../Level/Object/Chest")
+unlockable = NodePath("../Chest")

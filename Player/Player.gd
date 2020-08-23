@@ -148,7 +148,7 @@ func move_to(target_position, next_level):
 	
 	set_process(true)
 	if next_level != null:
-		return get_tree().change_scene(next_level)
+		return Globals.change_scene(next_level)
 	Grid.update_ais()
 
 func on_hit(other, damage):
