@@ -9,7 +9,6 @@
 [ext_resource path="res://tile-bit-map.png" type="Texture" id=7]
 [ext_resource path="res://Enemies/Chicken/Chicken.tscn" type="PackedScene" id=8]
 
-
 [sub_resource type="TileSet" id=1]
 0/name = "Grass 1"
 0/texture = ExtResource( 1 )
@@ -1330,7 +1329,7 @@
 36/shapes = [  ]
 36/z_index = 0
 
-[node name="Level 3" type="Node2D"]
+[node name="Level" type="Node2D"]
 script = ExtResource( 5 )
 
 [node name="Ground" type="TileMap" parent="."]
@@ -1355,7 +1354,6 @@ position = Vector2( 16, 48 )
 
 [node name="Key" parent="Object" instance=ExtResource( 2 )]
 position = Vector2( 144, 48 )
-type = 2
 unlockable = NodePath("../../../Level 3/Object/Chest")
 
 [node name="Chicken" parent="Object" instance=ExtResource( 8 )]

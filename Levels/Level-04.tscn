@@ -1539,7 +1539,7 @@
 51/shapes = [  ]
 51/z_index = 0
 
-[node name="Level 4" type="Node2D"]
+[node name="Level" type="Node2D"]
 script = ExtResource( 5 )
 
 [node name="Ground" type="TileMap" parent="."]
@@ -1557,7 +1557,7 @@ script = ExtResource( 6 )
 
 [node name="Key" parent="Object" instance=ExtResource( 2 )]
 position = Vector2( 64, 368 )
-unlockable = NodePath("../Chest")
+unlockable = NodePath("../../../Level/Object/Chest")
 
 [node name="Chest" parent="Object" instance=ExtResource( 3 )]
 position = Vector2( 208, 352 )

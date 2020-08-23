@@ -1328,7 +1328,7 @@
 36/shapes = [  ]
 36/z_index = 0
 
-[node name="Level 2" type="Node2D"]
+[node name="Level" type="Node2D"]
 script = ExtResource( 5 )
 
 [node name="Ground" type="TileMap" parent="."]
@@ -1353,5 +1353,4 @@ position = Vector2( 16, 48 )
 
 [node name="Key" parent="Object" instance=ExtResource( 2 )]
 position = Vector2( 96, 48 )
-type = 2
-unlockable = NodePath("../Chest")
+unlockable = NodePath("../../../Level/Object/Chest")

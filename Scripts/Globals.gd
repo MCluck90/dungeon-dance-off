@@ -94,5 +94,4 @@ func get_player():
 	return _get_player_node()
 
 func on_death():
-	print('TODO: Decide what to do about death')
-	get_tree().quit()
+	get_node("/root/Level").on_death()

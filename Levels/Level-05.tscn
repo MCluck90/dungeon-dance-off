@@ -1540,7 +1540,7 @@
 51/shapes = [  ]
 51/z_index = 0
 
-[node name="Level 5" type="Node2D"]
+[node name="Level" type="Node2D"]
 script = ExtResource( 5 )
 
 [node name="Ground" type="TileMap" parent="."]
