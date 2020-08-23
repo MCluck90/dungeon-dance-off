@@ -15,8 +15,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Dungeon Dance Off"
-run/main_scene="res://Levels/Level-06.tscn"
+config/name="Dungeon Beat Down"
+run/main_scene="res://Levels/Level-01.tscn"
 config/icon="res://icon.png"
 
 [autoload]
