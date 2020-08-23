@@ -1558,7 +1558,7 @@ script = ExtResource( 6 )
 
 [node name="Chest" parent="Object" instance=ExtResource( 3 )]
 position = Vector2( 128, 64 )
-nextLevel = "res://Levels/Level-01.tscn"
+nextLevel = "res://Levels/Level-06.tscn"
 open = true
 
 [node name="Player" parent="Object" instance=ExtResource( 4 )]

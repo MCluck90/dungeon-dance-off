@@ -17,6 +17,5 @@ func _on_next_level(scene_path):
 	return get_tree().change_scene(scene_path)
 
 func on_death():
-	start_score += 3
 	Globals.set_score(start_score)
 	return get_tree().reload_current_scene()
