@@ -1,13 +1,22 @@
 extends "res://Grid/pawn.gd"
 
+onready var Globals = get_node("/root/Globals")
 onready var Grid = get_parent()
 onready var MusicManager = get_node("/root/MusicManager")
 
+export var max_distance = 4
 var dying = false
 
 func update():
 	if dying:
 		return
+
+	var player = Globals.get_player()
+	var diff = position - player.position
+	var abs_diff = diff.abs() / 16.0
+	# Don't explode unless the player is close enough
+	if abs_diff.x > max_distance || abs_diff.y > max_distance:
+		return null
 
 	var collisions = [
 		Grid.get_collision(self, Vector2.LEFT),

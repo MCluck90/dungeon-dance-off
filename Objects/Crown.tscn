@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Objects/Chest.gd" type="Script" id=1]
+[ext_resource path="res://Assets/asset-pack.png" type="Texture" id=2]
+
+[node name="Crown" type="Node2D"]
+script = ExtResource( 1 )
+type = 1
+nextLevel = "res://Levels/Level-001.tscn"
+open_x = 704
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 704, 32, 16, 16 )

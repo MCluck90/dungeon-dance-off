@@ -1885,4 +1885,4 @@ position = Vector2( 256, 16 )
 
 [node name="Chest" parent="Object" instance=ExtResource( 3 )]
 position = Vector2( 256, -192 )
-nextLevel = "res://YouWin.tscn"
+nextLevel = "res://Levels/Level-08.tscn"

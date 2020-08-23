@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/asset-pack.png" type="Texture" id=1]
 [ext_resource path="res://Enemies/Scorpion/Scorpion.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/Chest.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Crown.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=5]
 [ext_resource path="res://Grid/grid.gd" type="Script" id=6]
@@ -1958,6 +1958,174 @@
 82/shape_one_way_margin = 0.0
 82/shapes = [  ]
 82/z_index = 0
+83/name = "Minecart"
+83/texture = ExtResource( 1 )
+83/tex_offset = Vector2( 0, 0 )
+83/modulate = Color( 1, 1, 1, 1 )
+83/region = Rect2( 240, 208, 16, 16 )
+83/tile_mode = 0
+83/occluder_offset = Vector2( 0, 0 )
+83/navigation_offset = Vector2( 0, 0 )
+83/shape_offset = Vector2( 0, 0 )
+83/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+83/shape_one_way = false
+83/shape_one_way_margin = 0.0
+83/shapes = [  ]
+83/z_index = 0
+84/name = "Bones - Human"
+84/texture = ExtResource( 1 )
+84/tex_offset = Vector2( 0, 0 )
+84/modulate = Color( 1, 1, 1, 1 )
+84/region = Rect2( 0, 240, 16, 16 )
+84/tile_mode = 0
+84/occluder_offset = Vector2( 0, 0 )
+84/navigation_offset = Vector2( 0, 0 )
+84/shape_offset = Vector2( 0, 0 )
+84/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+84/shape_one_way = false
+84/shape_one_way_margin = 0.0
+84/shapes = [  ]
+84/z_index = 0
+85/name = "Spider web"
+85/texture = ExtResource( 1 )
+85/tex_offset = Vector2( 0, 0 )
+85/modulate = Color( 1, 1, 1, 1 )
+85/region = Rect2( 32, 240, 16, 16 )
+85/tile_mode = 0
+85/occluder_offset = Vector2( 0, 0 )
+85/navigation_offset = Vector2( 0, 0 )
+85/shape_offset = Vector2( 0, 0 )
+85/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+85/shape_one_way = false
+85/shape_one_way_margin = 0.0
+85/shapes = [  ]
+85/z_index = 0
+86/name = "Rocks"
+86/texture = ExtResource( 1 )
+86/tex_offset = Vector2( 0, 0 )
+86/modulate = Color( 1, 1, 1, 1 )
+86/region = Rect2( 80, 32, 16, 16 )
+86/tile_mode = 0
+86/occluder_offset = Vector2( 0, 0 )
+86/navigation_offset = Vector2( 0, 0 )
+86/shape_offset = Vector2( 0, 0 )
+86/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+86/shape_one_way = false
+86/shape_one_way_margin = 0.0
+86/shapes = [  ]
+86/z_index = 0
+87/name = "Stone Wall Corner NW"
+87/texture = ExtResource( 1 )
+87/tex_offset = Vector2( 0, 0 )
+87/modulate = Color( 1, 1, 1, 1 )
+87/region = Rect2( 288, 48, 16, 16 )
+87/tile_mode = 0
+87/occluder_offset = Vector2( 0, 0 )
+87/navigation_offset = Vector2( 0, 0 )
+87/shape_offset = Vector2( 0, 0 )
+87/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+87/shape_one_way = false
+87/shape_one_way_margin = 0.0
+87/shapes = [  ]
+87/z_index = 0
+88/name = "Stone Wall Corner NE"
+88/texture = ExtResource( 1 )
+88/tex_offset = Vector2( 0, 0 )
+88/modulate = Color( 1, 1, 1, 1 )
+88/region = Rect2( 304, 48, 16, 16 )
+88/tile_mode = 0
+88/occluder_offset = Vector2( 0, 0 )
+88/navigation_offset = Vector2( 0, 0 )
+88/shape_offset = Vector2( 0, 0 )
+88/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+88/shape_one_way = false
+88/shape_one_way_margin = 0.0
+88/shapes = [  ]
+88/z_index = 0
+89/name = "Stone Wall Corner SW"
+89/texture = ExtResource( 1 )
+89/tex_offset = Vector2( 0, 0 )
+89/modulate = Color( 1, 1, 1, 1 )
+89/region = Rect2( 288, 64, 16, 16 )
+89/tile_mode = 0
+89/occluder_offset = Vector2( 0, 0 )
+89/navigation_offset = Vector2( 0, 0 )
+89/shape_offset = Vector2( 0, 0 )
+89/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+89/shape_one_way = false
+89/shape_one_way_margin = 0.0
+89/shapes = [  ]
+89/z_index = 0
+90/name = "Stone Wall Corner SE"
+90/texture = ExtResource( 1 )
+90/tex_offset = Vector2( 0, 0 )
+90/modulate = Color( 1, 1, 1, 1 )
+90/region = Rect2( 304, 64, 16, 16 )
+90/tile_mode = 0
+90/occluder_offset = Vector2( 0, 0 )
+90/navigation_offset = Vector2( 0, 0 )
+90/shape_offset = Vector2( 0, 0 )
+90/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+90/shape_one_way = false
+90/shape_one_way_margin = 0.0
+90/shapes = [  ]
+90/z_index = 0
+91/name = "Stone Wall Slant NW"
+91/texture = ExtResource( 1 )
+91/tex_offset = Vector2( 0, 0 )
+91/modulate = Color( 1, 1, 1, 1 )
+91/region = Rect2( 320, 48, 16, 16 )
+91/tile_mode = 0
+91/occluder_offset = Vector2( 0, 0 )
+91/navigation_offset = Vector2( 0, 0 )
+91/shape_offset = Vector2( 0, 0 )
+91/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+91/shape_one_way = false
+91/shape_one_way_margin = 0.0
+91/shapes = [  ]
+91/z_index = 0
+92/name = "Stone Wall Slant NE"
+92/texture = ExtResource( 1 )
+92/tex_offset = Vector2( 0, 0 )
+92/modulate = Color( 1, 1, 1, 1 )
+92/region = Rect2( 336, 48, 16, 16 )
+92/tile_mode = 0
+92/occluder_offset = Vector2( 0, 0 )
+92/navigation_offset = Vector2( 0, 0 )
+92/shape_offset = Vector2( 0, 0 )
+92/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+92/shape_one_way = false
+92/shape_one_way_margin = 0.0
+92/shapes = [  ]
+92/z_index = 0
+93/name = "Stone Wall Slant SW"
+93/texture = ExtResource( 1 )
+93/tex_offset = Vector2( 0, 0 )
+93/modulate = Color( 1, 1, 1, 1 )
+93/region = Rect2( 320, 64, 16, 16 )
+93/tile_mode = 0
+93/occluder_offset = Vector2( 0, 0 )
+93/navigation_offset = Vector2( 0, 0 )
+93/shape_offset = Vector2( 0, 0 )
+93/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+93/shape_one_way = false
+93/shape_one_way_margin = 0.0
+93/shapes = [  ]
+93/z_index = 0
+94/name = "Stone Wall Slant SE"
+94/texture = ExtResource( 1 )
+94/tex_offset = Vector2( 0, 0 )
+94/modulate = Color( 1, 1, 1, 1 )
+94/region = Rect2( 336, 64, 16, 16 )
+94/tile_mode = 0
+94/occluder_offset = Vector2( 0, 0 )
+94/navigation_offset = Vector2( 0, 0 )
+94/shape_offset = Vector2( 0, 0 )
+94/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+94/shape_one_way = false
+94/shape_one_way_margin = 0.0
+94/shapes = [  ]
+94/z_index = 0
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 5 )
@@ -1966,27 +2134,72 @@ script = ExtResource( 5 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 196615, 42, 0, 196616, 42, 0, 196617, 42, 0, 327686, 42, 0 )
+tile_data = PoolIntArray( 196615, 42, 0, 196616, 42, 0, 196617, 42, 0, 196618, 5, 0, 196619, 5, 0, 196620, 5, 0, 196621, 5, 0, 196622, 5, 0, 196623, 5, 0, 196624, 5, 0, 196625, 5, 0, 196626, 5, 0, 196627, 5, 0, 196628, 5, 0, 196629, 5, 0, 262145, -1610612714, 0, 262147, -1610612714, 0, 262148, -1610612714, 0, 262149, -1610612714, 0, 262150, -1610612714, 0, 262152, 5, 0, 262153, 5, 0, 262154, 5, 0, 262155, 5, 0, 262164, 5, 0, 262165, 22, 0, 327682, 4, 0, 327683, 4, 0, 327684, 4, 0, 327685, 5, 0, 327686, 42, 0, 327688, 5, 0, 327689, 5, 0, 327690, 5, 0, 327701, 22, 0, 393237, 5, 0, 458773, 22, 0, 524306, -1610612714, 0, 524307, -1610612714, 0, 524308, -1610612714, 0, 524309, 25, 0, 589845, 22, 0, 655381, 22, 0, 720917, 22, 0, 786453, 5, 0, 851989, 5, 0, 917525, 5, 0, 983060, 5, 0, 983061, 5, 0, 983062, 5, 0, 1048597, 5, 0, 1179669, 5, 0, 1245204, 5, 0, 1245205, 42, 0, 1245206, 5, 0, 1310739, 5, 0, 1310741, 42, 0, 1310743, 5, 0, 1376275, 42, 0, 1376276, 42, 0, 1376277, 3, 0, 1376278, 5, 0, 1376280, 4, 0, 1441810, 4, 0, 1441811, 3, 0, 1441813, 42, 0, 1507347, 42, 0, 1507348, 3, 0, 1507349, 3, 0, 1507350, 5, 0, 1507352, 4, 0, 1572882, 4, 0, 1572885, 42, 0, 1572887, 42, 0, 1572888, 4, 0, 1638418, 4, 0, 1638419, 42, 0, 1638421, 3, 0, 1638422, 42, 0, 1638423, 3, 0, 1638424, 4, 0, 1703955, 5, 0, 1703956, 5, 0, 1703957, 5, 0, 1703958, 4, 0, 1703959, 4, 0, 1769493, 5, 0, 1769494, 4, 0, 1835029, 4, 0, 1900565, 4, 0, 1966101, 41, 0, 2031637, 41, 0, 2097173, 41, 0, 2162709, 40, 0, 2228245, 40, 0, 2293777, 40, 0, 2293778, 40, 0, 2293779, 40, 0, 2293780, 40, 0, 2293781, 40, 0, 2293782, 40, 0, 2293783, 40, 0, 2293784, 40, 0, 2293785, 40, 0, 2359313, 40, 0, 2359314, 40, 0, 2359315, 40, 0, 2359316, 40, 0, 2359317, 40, 0, 2359318, 40, 0, 2359319, 40, 0, 2359320, 40, 0, 2359321, 40, 0, 2424849, 40, 0, 2424850, 40, 0, 2424851, 40, 0, 2424852, 40, 0, 2424853, 40, 0, 2424854, 40, 0, 2424855, 40, 0, 2424856, 40, 0, 2424857, 40, 0, 2490385, 40, 0, 2490386, 40, 0, 2490387, 40, 0, 2490388, 40, 0, 2490389, 40, 0, 2490390, 40, 0, 2490391, 40, 0, 2490392, 40, 0, 2490393, 40, 0, 2555921, 40, 0, 2555922, 40, 0, 2555923, 40, 0, 2555924, 40, 0, 2555925, 40, 0, 2555926, 40, 0, 2555927, 40, 0, 2555928, 40, 0, 2555929, 40, 0, 2621457, 40, 0, 2621458, 40, 0, 2621459, 40, 0, 2621460, 40, 0, 2621461, 40, 0, 2621462, 40, 0, 2621463, 40, 0, 2621464, 40, 0, 2621465, 40, 0, 2686993, 40, 0, 2686994, 40, 0, 2686995, 40, 0, 2686996, 40, 0, 2686997, 40, 0, 2686998, 40, 0, 2686999, 40, 0, 2687000, 40, 0, 2687001, 40, 0 )
 
 [node name="Object" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 128, 0, 0, 128, 0, 0 )
 format = 1
-tile_data = PoolIntArray( 196603, 5, 0, 131072, 75, 0, 131073, 76, 0, 131074, 76, 0, 131075, 76, 0, 131076, 76, 0, 131077, 76, 0, 131078, 76, 0, 131079, 76, 0, 131080, 76, 0, 131081, 76, 0, 131082, 76, 0, 196608, 82, 0, 262144, 69, 0, 327680, 82, 0, 393216, 81, 0, 393217, 80, 0, 393218, 80, 0, 393219, 80, 0, 393220, 80, 0, 393221, 80, 0, 393222, 80, 0, 393223, 80, 0, 393224, 80, 0, 393225, 80, 0, 393226, 80, 0 )
+tile_data = PoolIntArray( 65554, 75, 0, 65555, 76, 0, 65556, 77, 0, 196603, 5, 0, 131072, 75, 0, 131073, 76, 0, 131074, 76, 0, 131075, 76, 0, 131076, 76, 0, 131077, 76, 0, 131078, 76, 0, 131079, 76, 0, 131080, 76, 0, 131081, 76, 0, 131082, 76, 0, 131083, 76, 0, 131084, 76, 0, 131085, 76, 0, 131086, 76, 0, 131087, 76, 0, 131088, 76, 0, 131089, 76, 0, 131090, 90, 0, 131092, 89, 0, 131093, 76, 0, 131094, 77, 0, 196608, 82, 0, 196609, 85, 0, 196613, 86, 0, 196630, 78, 0, 262144, 69, 0, 262146, 83, 0, 262157, 80, 0, 262158, 80, 0, 262159, 80, 0, 262160, 80, 0, 262161, 80, 0, 262162, 80, 0, 262163, 88, 0, 262166, 78, 0, 327680, 82, 0, 327687, 84, 0, 327691, 84, 0, 327692, 94, 0, 327699, 93, 0, 327700, 88, 0, 327702, 89, 0, 327703, 92, 0, 393216, 81, 0, 393217, 80, 0, 393218, 80, 0, 393219, 80, 0, 393220, 80, 0, 393221, 80, 0, 393222, 80, 0, 393223, 80, 0, 393224, 80, 0, 393225, 80, 0, 393226, 80, 0, 393227, 94, 0, 393236, 82, 0, 393239, 78, 0, 458768, 75, 0, 458769, 76, 0, 458770, 76, 0, 458771, 76, 0, 458772, 90, 0, 458774, 87, 0, 458775, 94, 0, 524304, 82, 0, 524305, 83, 0, 524310, 78, 0, 589840, 81, 0, 589841, 80, 0, 589842, 80, 0, 589843, 80, 0, 589844, 88, 0, 589846, 78, 0, 655380, 82, 0, 655382, 78, 0, 720916, 82, 0, 720918, 78, 0, 786452, 82, 0, 786454, 78, 0, 851988, 82, 0, 851990, 78, 0, 917523, 91, 0, 917524, 90, 0, 917526, 89, 0, 917527, 92, 0, 983059, 82, 0, 983063, 78, 0, 1048595, 93, 0, 1048596, 88, 0, 1048598, 87, 0, 1048599, 94, 0, 1114132, 82, 0, 1114134, 78, 0, 1179667, 91, 0, 1179668, 90, 0, 1179670, 89, 0, 1179671, 92, 0, 1245202, 91, 0, 1245203, 90, 0, 1245207, 89, 0, 1245208, 92, 0, 1310737, 91, 0, 1310738, 90, 0, 1310744, 85, 0, 1310745, 92, 0, 1376273, 82, 0, 1376274, 86, 0, 1376281, 78, 0, 1441809, 82, 0, 1441816, 86, 0, 1441817, 78, 0, 1507345, 82, 0, 1507346, 86, 0, 1507351, 84, 0, 1507353, 78, 0, 1572881, 82, 0, 1572889, 78, 0, 1638417, 82, 0, 1638425, 78, 0, 1703953, 93, 0, 1703954, 88, 0, 1703960, 87, 0, 1703961, 94, 0, 1769490, 93, 0, 1769491, 80, 0, 1769492, 88, 0, 1769495, 87, 0, 1769496, 94, 0, 1835028, 82, 0, 1835030, 87, 0, 1835031, 94, 0, 1900564, 82, 0, 1900566, 78, 0, 1966100, 82, 0, 1966102, 78, 0, 2031636, 82, 0, 2031638, 78, 0, 2097172, 82, 0, 2097174, 78, 0, 2162708, 82, 0, 2162710, 78, 0, 2228241, 91, 0, 2228242, 76, 0, 2228243, 76, 0, 2228244, 90, 0, 2228246, 89, 0, 2228247, 76, 0, 2228248, 76, 0, 2228249, 92, 0, 2293776, 91, 0, 2293777, 90, 0, 2293785, 89, 0, 2293786, 92, 0, 2359312, 82, 0, 2359322, 78, 0, 2424848, 82, 0, 2424858, 78, 0, 2490384, 82, 0, 2490394, 78, 0, 2555920, 82, 0, 2555930, 78, 0, 2621456, 82, 0, 2621466, 78, 0, 2686992, 93, 0, 2686993, 88, 0, 2687001, 87, 0, 2687002, 94, 0, 2752529, 93, 0, 2752530, 80, 0, 2752531, 80, 0, 2752532, 80, 0, 2752533, 80, 0, 2752534, 80, 0, 2752535, 80, 0, 2752536, 80, 0, 2752537, 94, 0 )
 script = ExtResource( 6 )
 
 [node name="Player" parent="Object" instance=ExtResource( 4 )]
 position = Vector2( 64, 64 )
 
-[node name="Chest" parent="Object" instance=ExtResource( 3 )]
-position = Vector2( 64, 48 )
-nextLevel = "res://YouWin.tscn"
-
 [node name="Dynamite" parent="Object" instance=ExtResource( 8 )]
 position = Vector2( 128, 48 )
 
+[node name="Dynamite2" parent="Object" instance=ExtResource( 8 )]
+position = Vector2( 304, 32 )
+
+[node name="Dynamite3" parent="Object" instance=ExtResource( 8 )]
+position = Vector2( 352, 96 )
+
+[node name="Dynamite4" parent="Object" instance=ExtResource( 8 )]
+position = Vector2( 336, 240 )
+max_distance = 3
+
+[node name="Dynamite5" parent="Object" instance=ExtResource( 8 )]
+position = Vector2( 320, 320 )
+
+[node name="Dynamite6" parent="Object" instance=ExtResource( 8 )]
+position = Vector2( 352, 320 )
+
+[node name="Dynamite7" parent="Object" instance=ExtResource( 8 )]
+position = Vector2( 352, 352 )
+
+[node name="Dynamite8" parent="Object" instance=ExtResource( 8 )]
+position = Vector2( 320, 352 )
+
+[node name="Dynamite9" parent="Object" instance=ExtResource( 8 )]
+position = Vector2( 320, 384 )
+
+[node name="Dynamite10" parent="Object" instance=ExtResource( 8 )]
+position = Vector2( 352, 384 )
+
 [node name="Scorpion" parent="Object" instance=ExtResource( 2 )]
 position = Vector2( 128, 64 )
+
+[node name="Scorpion2" parent="Object" instance=ExtResource( 2 )]
+position = Vector2( 336, 48 )
+
+[node name="Scorpion3" parent="Object" instance=ExtResource( 2 )]
+position = Vector2( 288, 128 )
+
+[node name="Scorpion4" parent="Object" instance=ExtResource( 2 )]
+position = Vector2( 320, 240 )
+
+[node name="Scorpion5" parent="Object" instance=ExtResource( 2 )]
+position = Vector2( 352, 240 )
+
+[node name="Scorpion6" parent="Object" instance=ExtResource( 2 )]
+position = Vector2( 336, 256 )
+
+[node name="Crown" parent="Object" instance=ExtResource( 3 )]
+position = Vector2( 336, 608 )
+nextLevel = "res://YouWin.tscn"
+open = true
 
 [node name="Darkness" type="Node2D" parent="."]
 
@@ -2000,11 +2213,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ColorRect5" type="ColorRect" parent="Darkness"]
+margin_left = -96.0
+margin_top = -112.0
+margin_right = 288.0
+margin_bottom = 32.0
+color = Color( 0, 0.00784314, 0.0588235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ColorRect2" type="ColorRect" parent="Darkness"]
 margin_left = -96.0
 margin_top = 112.0
-margin_right = 176.0
-margin_bottom = 272.0
+margin_right = 256.0
+margin_bottom = 480.0
 color = Color( 0, 0.00784314, 0.0588235, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
