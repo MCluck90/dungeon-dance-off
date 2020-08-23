@@ -99,3 +99,7 @@ func on_death():
 func change_scene(scene_path):
 	_ready()
 	return get_tree().change_scene(scene_path)
+
+func reload_current_scene():
+	_ready()
+	return get_tree().reload_current_scene()

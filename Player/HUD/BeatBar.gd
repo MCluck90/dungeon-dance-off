@@ -6,7 +6,8 @@ var hit = null
 var hit_timer = null
 
 func _ready():
-	pass
+	hit = null
+	hit_timer = null
 	
 func _process(_delta):
 	if hit_timer != null && hit_timer.get_time_left() <= 0.0:

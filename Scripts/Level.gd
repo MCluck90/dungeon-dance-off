@@ -11,7 +11,7 @@ func _process(_delta):
 		get_tree().quit()
 	if Input.is_action_just_pressed("restart"):
 		Globals.set_score(start_score)
-		return get_tree().reload_current_scene()
+		return Globals.reload_current_scene()
 
 func _on_next_level(scene_path):
 	return Globals.change_scene(scene_path)

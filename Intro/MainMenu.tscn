@@ -3,8 +3,6 @@
 [ext_resource path="res://Intro/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/asset-pack.png" type="Texture" id=2]
 
-
-
 [sub_resource type="TileSet" id=1]
 0/name = "asset-pack.png 0"
 0/texture = ExtResource( 2 )
